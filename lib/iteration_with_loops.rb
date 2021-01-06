@@ -21,15 +21,18 @@ end
 
 
 # def join_nested_strings(src)
-#   final_output = []
+#   final_output = ""
 #   row_index = 0 
 #   while row_index < src.count do
-#       element_index = 0 
+#     element_index = 0 
 #     while element_index < src[row_index].count do
-#       final_output << src[row_index][element_index] == String
-#       element_index += 1
+#         src[row_index][element_index]
+          if src[row_index][element_index].class == String
+            final_output << "#{src[row_index][element_index} "
+          end  
+#         element_index += 1
 #     end
-#       row_index += 1 
+#     row_index += 1 
 #   end
-#   return final_output.join('') 
+#   p final_output 
 # end
