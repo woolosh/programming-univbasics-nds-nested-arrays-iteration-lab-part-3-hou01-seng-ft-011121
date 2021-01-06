@@ -1,29 +1,41 @@
-
-
-def join_nested_strings(src)
+require 'pry'
   # src will be an Array of Arrays of Strings and Integers
   # Combine all Strings present in the AoA into a single value and return it
   
+# def join_nested_strings(src)
 
-  final_output = ("")
-
-  row_index = 0
+#   final_output = []
   
+#   row_index = 0 
+  
+#   while row_index < src.count do
+#       element_index = 0 
+
+#     while element_index < src[row_index].count do
+#       final_output << src[row_index][element_index] == String
+        
+#       element_index += 1
+#     end
+#       row_index += 1 
+#   end
+  
+#   return final_output.join('') 
+
+# end
+
+def join_nested_strings src
+  output = ""
+  row_index = 0  
   while row_index < src.count do
-    
     element_index = 0 
-    
     while element_index < src[row_index].count do
-      
-      final_output += src[row_index][element_index].is_a? String
+      src[row_index][element_index]
+      if src[row_index][element_index].class == String
+        final_output << "#{src[row_index][element_index]} "
+      end
       element_index += 1
-      
     end
-
-    row_index += 1
-    
+    row_index += 1 
   end
-  
-  return final_output
-  
+  p output.chomp(" ")
 end
